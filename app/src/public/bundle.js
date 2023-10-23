@@ -31250,14 +31250,26 @@
        return view.cm || null;
    }
 
+   const maze = `l   j                                     
+══╗   ╔══════════════╦═══════════════════╗
+  ║   ║              ║ 16l               ║
+  ║   ║   ╔══════╗   ║   ╔════════════   ║
+  ║   ║   ║      ║   ║   ║               ║
+  ║   ║   ║      ║   ║   ║   ╔═══════════╣
+  ║   ║   ╚══════╣   ║   ║   ╚═══════════╣
+  ║   ║        h ║       ║               ║
+  ║   ╚═══════   ╠═══════╩════════════   ║
+  ║ l          k ║                   20h ║
+  ╚══════════════╝   ════════════════════╝
+                                          `;
+
    const view = new EditorView({
-     doc: "",
+     doc: maze,
      extensions: [
        vim(),
        basicSetup,
      ],
      parent: document.querySelector('#editor'),
-     lineNumbers: true,
    });
 
    view.focus();
