@@ -1,5 +1,8 @@
 <html>
 <script type="module" src="/bundle.js"> </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,700&display=swap" rel="stylesheet">
 <style>
   html,
   body {
@@ -10,12 +13,237 @@
 
   .cm-editor {
     height: 100%;
-    width: 100%;
+    width: calc(100% - 400px);
+  }
+
+  .help {
+    float: right;
+    width: 400px;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-left: 1px solid #ddd;
+    font-family: sans-serif;
+  }
+
+  table tbody tr td {
+    font-size: 11pt;
+    padding: 6px;
+  }
+
+  hr {
+    margin: 14px 0;
+    opacity: 0
+  }
+
+  td.key {
+    width: 40px;
+
+    & div {
+      width: 38px;
+      height: 38px;
+      border: 1px solid grey;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #222;
+      color: fff;
+      font-size: 13pt;
+      font-family: 'Literata', serif;
+    }
+
+    &.insert div {
+      background-color: #001aa1;
+    }
+  }
+
+  .hidden {
+    opacity: 0;
+  }
+
+  .visible {
+    opacity: 1;
+    transition: opacity 0.5s ease;
   }
 </style>
 
 <body>
-  <div id="editor"></div>
+  <div class="help">
+    <table>
+      <tbody>
+        <tr>
+          <td></td>
+          <td class="key">
+            <div>k</div>
+          </td>
+          <td></td>
+          <td width="10px"></td>
+          <td class="key hidden display-22">
+            <div>w</div>
+          </td>
+          <td class="hidden display-22"><u>w</u>ord →</td>
+        </tr>
+        <tr>
+          <td class="key">
+            <div>h</div>
+          </td>
+          <td class="key">
+            <div>j</div>
+          </td>
+          <td class="key">
+            <div>l</div>
+          </td>
+          <td width="10px"></td>
+          <td class="key hidden display-22">
+            <div>b</div>
+          </td>
+          <td class="hidden display-22"><u>b</u>ack ← </td>
+        </tr>
+      </tbody>
+    </table>
+    <table width="100%">
+      <!--
+      <tbody class="hidden display-13">
+        <tr>
+          <td class="key">
+            <div>0</div>
+          </td>
+          <td>Home</td>
+          <td class="key">
+            <div>$</div>
+          </td>
+          <td>End</td>
+          <td>
+        </tr>
+      </tbody>
+      -->
+      <tbody class="hidden display-29">
+        <tr>
+          <td colspan="4">
+            <hr />
+          </td>
+        </tr>
+        <tr>
+          <td class="key insert">
+            <div>i</div>
+          </td>
+          <td><u>i</u>nsert</td>
+          <td class="key">
+            <div style="background-color: #f5a73a; border-color: #df9937">esc</div>
+          </td>
+          <td>Exit editing</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class="key insert hidden display-34">
+            <div>I</div>
+          </td>
+          <td class="hidden display-34"><u>I</u>nsert (line start)</td>
+          <td class="key insert hidden display-39">
+            <div>A</div>
+          </td>
+          <td class="hidden display-39"><u>A</u>ppend (line end)</td>
+        </tr>
+      </tbody>
+      <tbody class="hidden display-44">
+        <tr>
+          <td colspan="4">
+            <hr />
+          </td>
+        </tr>
+        <tr>
+          <td class="key">
+            <div>dd</div>
+          </td>
+          <td><u>d</u>elete/cut line</td>
+          <td class="key">
+            <div>p</div>
+          </td>
+          <td><u>p</u>aste</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class="key hidden display-68">
+            <div>dw</div>
+          </td>
+          <td class="hidden display-68"><u>d</u>elete <u>w</u>ord</td>
+          <td class="key insert hidden display-80">
+            <div>cw</div>
+          </td>
+          <td class="hidden display-80"><u>c</u>hange <u>w</u>ord</td>
+        </tr>
+      </tbody>
+      <tbody class="hidden display-89">
+        <tr>
+          <td class="key">
+            <div>D</div>
+          </td>
+          <td><u>D</u>elete rest of line</td>
+          <td class="key insert">
+            <div>C</div>
+          </td>
+          <td><u>C</u>hange rest of line</td>
+        </tr>
+      </tbody>
+      <tbody class="hidden display-98">
+        <tr>
+          <td colspan="4">
+            <hr />
+          </td>
+        </tr>
+        <tr>
+          <td class="key hidden display-98">
+            <div>/</div>
+          </td>
+          <td class="hidden display-98">find</td>
+          <td class="key hidden display-98">
+            <div>n</div>
+          </td>
+          <td class="hidden display-98"><u>n</u>ext</td>
+        </tr>
+      </tbody>
+      <tbody class="hidden display-109">
+        <tr>
+          <td class="key">
+            <div>*</div>
+          </td>
+          <td>find <i>this</i> word</td>
+        </tr>
+      </tbody>
+      <tbody class="hidden display-122">
+        <tr>
+          <td colspan="4">
+            <hr />
+          </td>
+        </tr>
+        <tr>
+          <td class="key">
+            <div>.</div>
+          </td>
+          <td>repeat last change</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div id="editor">
+  </div>
 </body>
 
 </html>
+<script>
+  const display = (lineNumber) => {
+    for (let i = 0; i <= lineNumber; i++) {
+      elements = document.getElementsByClassName(`display-${i}`)
+
+      for (element of elements) {
+        element.classList.remove('hidden')
+        element.classList.add('visible')
+      }
+    }
+  }
+  // send troy video
+</script>
