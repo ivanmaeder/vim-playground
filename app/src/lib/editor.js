@@ -38,26 +38,26 @@ September October November Xmas
 
 """ Some of these lines are in the wrong list. Move them with dd and p
 
-Groceries
-  - Wash the dishes
-  - Milk
-  - Eggs
-  - Vacuum the living room
-  - Chicken
-  - Spinach
+Favorite things at work
+  - Company off-site
+  - TabaPay
+  - Acronyms
+  - YAML
+  - All-hands
+  - Surveys
 
-Home chores
-  - Clean the bathroom
-  - Bread
-  - Apples
-  - Take out the trash
+Least favorites
+  - Auditors
+  - Lunch and learn
+  - Office snacks
+  - Docker
 
 
 """ Add all these lines to the list above using d3d (and p)
 
-  - Water the plants
-  - Sweep the porch or entryway
-  - Clean the windows
+  - "Have you checked Slab?"
+  - "I think that's in a Slab document somewhere."
+  - "Try Slab."
 
 
 """ D and C will delete/change the rest of the line
