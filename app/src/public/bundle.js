@@ -31407,7 +31407,7 @@ id,name,date of birth,street,postcode,city,profession,employer
    //3. Replace all instances of Road with Rd
    //4. It turns out that Sanjay has the same job and employer as Maya. Fix this line
    //5. Find the duplicate line and delete it
-   //6. Bonus: lowercase r will replace a character. There are some errors that have to be fixed: all the exclamation points should be 1 characters
+   //6. Bonus: lowercase r will replace a character. Replace all the exclamation points with the number 1
 
    const listener = () => {
      let maxLine = 0;
