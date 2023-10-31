@@ -60,28 +60,7 @@ Home chores
   - Clean the windows
 
 
-""" More nounds and verbs...
-""" 
-"""   - dw will delete a whole word
-"""   - d5w will delete 5 words
-
-William Shakespeare Jane Austen Charles Dickens Mark Twain
-Leo Tolstoy Fyodor Dostoevsky George Orwell Ernest Hemingway
-Charlotte Brontë Emily Brontë Edgar Allan Poe Victor Hugo
-Nathaniel Hawthorne H.G. Wells Mary Shelley Oscar Wilde
-Jules Verne Joseph Conrad Thomas Hardy Herman Melville
-
-
-"""   - cw is the same, but changes to insert mode
-
-William Shakespeare Jane Austen Charles Dickens Mark Twain
-Leo Tolstoy Fyodor Dostoevsky George Orwell Ernest Hemingway
-Charlotte Brontë Emily Brontë Edgar Allan Poe Victor Hugo
-Nathaniel Hawthorne H.G. Wells Mary Shelley Oscar Wilde
-Jules Verne Joseph Conrad Thomas Hardy Herman Melville
-
-
-"""   - D and C will delete/change the rest of the line
+""" D and C will delete/change the rest of the line
 
 William Shakespeare Jane Austen Charles Dickens Mark Twain
 Leo Tolstoy Fyodor Dostoevsky George Orwell Ernest Hemingway
@@ -109,18 +88,41 @@ Jules Verne Joseph Conrad Thomas Hardy Herman Melville
 87630 91458 76320 49186 75430 12765 98342 10859 28592 85928 59212 36575
 83409 57612 38746 29381 75469 20183 76459 20138 75649 20387 51649 28735
 82765 40293 87516 42012 34551 24876 50918 27350 46129 83754 62109 83756
-01786 49203 81746 59203 12345 79210 38765 49201 78463 09582 74612 93587
+01786 49203 81746 59203 87641 79210 38765 49201 78463 09582 74612 93587
 02987 56314 31415 76540 19287 35046 12983 75402 19876 54012 31415 60412
 76520 41987 65401 92785 64098 12376 50492 13875 60491 23876 50921 87654
 
 
-""" One more key: .
+""" Nouns and verbs...
+""" 
+"""   - dw will delete a whole word
+"""   - d5w will delete 5 words
+"""   - cw is the same, but changes to insert mode
+
+William Shakespeare Jane Austen Charles Dickens Mark Twain
+Leo Tolstoy Fyodor Dostoevsky George Orwell Ernest Hemingway
+Charlotte Brontë Emily Brontë Edgar Allan Poe Victor Hugo
+Nathaniel Hawthorne H.G. Wells Mary Shelley Oscar Wilde
+Jules Verne Joseph Conrad Thomas Hardy Herman Melville
+
+
+""" One very handy key: .
 """
 """ Replace all 31415 with dashes
 """
 """   - Use * to search
 """   - cw to change the "word"
 """   - n and . (next and repeat)
+
+
+87563 94265 47813 29876 50192 38765 12039 23487 66126 36688 12387 68765
+87165 23497 16530 98746 31415 85674 32195 34516 52300 37645 53929 31415
+87630 91458 76320 49186 75430 12765 98342 10859 28592 85928 59212 36575
+83409 57612 38746 29381 75469 20183 76459 20138 75649 20387 51649 28735
+82765 40293 87516 42012 34551 24876 50918 27350 46129 83754 62109 83756
+01786 49203 81746 59203 87641 79210 38765 49201 78463 09582 74612 93587
+02987 56314 31415 76540 19287 35046 12983 75402 19876 54012 31415 60412
+76520 41987 65401 92785 64098 12376 50492 13875 60491 23876 50921 87654
 
 
 """ Time for golf. Using the least number of keystrokes...
