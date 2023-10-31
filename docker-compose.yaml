@@ -2,10 +2,14 @@ services:
   proxy:
     container_name: proxy
     image: nginx:alpine3.18-slim
+    environment:
+      - HOST=${HOST}
+      - PRODUCTION_HOST=${PRODUCTION_HOST}
     volumes:
-      - ./proxy/nginx.conf:/etc/nginx/nginx.conf
+      - ./proxy/nginx.conf:/etc/nginx/templates/default.conf.template
       - ./static-files:/usr/share/nginx/html
-      - ${CERT_PATH}:/etc/ssl/certs/${HOST}
+      - ${CERT_PATH}/fullchain.pem:/etc/ssl/certs/${HOST}/fullchain.pem
+      - ${CERT_PATH}/privkey.pem:/etc/ssl/certs/${HOST}/privkey.pem
     ports:
       - 80:80
       - 443:443
