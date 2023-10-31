@@ -31251,31 +31251,23 @@
    }
 
    const maze = `l   j                                     
-══╗   ╔══════════════╦═══════════════════╗
-  ║   ║              ║ 16l               ║     """ Using these keys instead of the arrows
-  ║   ║   ╔══════╗   ║   ╔════════════   ║     """ keeps your hands on the home keys
-  ║   ║   ║      ║   ║   ║               ║
-  ║   ║   ║      ║   ║   ║   ╔═══════════╣
-  ║   ║   ╚══════╣   ║   ║   ╚═══════════╣
-  ║   ║        h ║       ║               ║
-  ║   ╚═══════   ╠═══════╩════════════   ║
-  ║ l          k ║                   20h ║
-  ╚══════════════╝   ════════════════════╝
-                                          
-                   x
+══╗    ╔════════════════╦═════════╗
+  ║    ║                ║      9j ║     """ Using these keys instead of the arrows
+  ║    ║    ╔══════╗    ║         ║     """ keeps your hands on the home keys
+  ║    ║    ║      ║    ║    ║    ║
+  ║    ║    ║      ║    ║    ║    ║
+  ║    ║    ╚══════╣    ║    ║    ║
+  ║    ║         h ║    ║    ║    ║
+  ║    ╚═══════    ║         ║    ║
+  ║ l            k ║      7k ║    ║
+  ╚════════════════╩═════════╝     
+                                x
 
 
 """ Vim is "MODAL"
 """ 
 """   - Move around
 """   - Edit
-
-
-""" Use w and b to move faster
-
-January February March April
-May June July August
-September October November December
 
 
 """ Use i and ESC to insert the missing letters
@@ -31413,7 +31405,7 @@ id,name,date of birth,street,postcode,city,profession,employer
    //3. Replace all instances of Road with Rd
    //4. It turns out that Sanjay has the same job and employer as Maya. Fix this line
    //5. Find the duplicate line and delete it
-   //6. Bonus: lowercase r will replace a character. There are some errors with some of the 1 characters. They have an exclamation point. Fix them
+   //6. Bonus: lowercase r will replace a character. There are some errors that have to be fixed: all the exclamation points should be 1 characters
 
    const listener = () => {
      let maxLine = 0;
