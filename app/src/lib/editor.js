@@ -149,8 +149,6 @@ id,name,date of birth,street,postcode,city,profession,employer
 7081963245,Ahmed Khan,1984-11-29,Blue River Road,45678,Dhaka,Teacher,Sunshine School
 5928374610,Sophia Kim,1976-03-12,Golden Temple Street,02345,Seoul,Graphic Designer,Design Creations
 
-
-
 `
 
 //1. Find all people living in Tokyo
